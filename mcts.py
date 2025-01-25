@@ -112,8 +112,12 @@ def show_grid(p1: int, p2: int):
         print("".join(row))
 
 
-p1, p2 = 0, 0
-while not is_winning(p1) and not is_draw(p1, p2):
-    p1, p2 = mcts(p1, p2)
-    show_grid(p1, p2)
-    print()
+def main():
+    p1, p2 = 0, 0
+    while not is_winning(p1) and not is_draw(p1, p2):
+        p1, p2 = mcts(p1, p2)
+        show_grid(p1, p2)
+        print()
+
+if __name__ == "__main__":
+    main()
